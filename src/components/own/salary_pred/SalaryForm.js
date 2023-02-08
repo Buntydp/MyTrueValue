@@ -138,7 +138,10 @@ class Form extends Component {
     e.preventDefault();
     console.log(this.state);
     // fetch('http://192.168.56.1:5000/predict', {
-    fetch('https://final-project-apis.herokuapp.com/predict', {
+    // fetch('https://final-project-apis.herokuapp.com/predict', {
+    fetch('https://flaskapi-eteq.onrender.com/predict', {
+    // fetch('http://localhost:5000/predict', {
+    // fetch('http://127.0.0.1:5000/predict', {
       method: 'POST',
       body: JSON.stringify({
         content: this.state
@@ -162,7 +165,10 @@ class Form extends Component {
   // eslint-disable-next-line class-methods-use-this
   tester = () => {
     console.log('its tester');
-    fetch('https://final-project-apis.herokuapp.com/pre', {
+    // fetch('https://final-project-apis.herokuapp.com/pre', {
+    fetch('https://flaskapi-eteq.onrender.com/pre', {
+    // fetch('http://localhost:5000/pre', {
+    // fetch('http://127.0.0.1:5000/pre', {
       method: 'POST',
       body: JSON.stringify({
         content: this.state

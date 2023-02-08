@@ -35,7 +35,9 @@ export default function RegisterForm() {
     validationSchema: RegisterSchema,
     onSubmit: (values) => {
       console.log('api calling...', values);
-      fetch('https://final-project-apis.herokuapp.com/register', {
+      // fetch('https://final-project-apis.herokuapp.com/register', {
+      // fetch('http://localhost:5000/register', {
+      fetch('https://flaskapi-eteq.onrender.com/register', {
         method: 'POST',
         body: JSON.stringify({
           content: values
